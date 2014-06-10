@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.philsutech.mobile.app"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Philsutech" >
+        <activity
+            android:name="com.philsutech.mobile.app.Dash"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.philsutech.mobile.app.EventActivity"
+            android:label="@string/title_activity_event"
+            android:parentActivityName="com.philsutech.mobile.app.Dash"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.philsutech.mobile.app.Dash" />
+        </activity>
+        <activity
+            android:name="com.philsutech.mobile.app.Register"
+            android:label="@string/title_activity_register" >
+        </activity>
+    </application>
+
+</manifest>
